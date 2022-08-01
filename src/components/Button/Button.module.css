@@ -1,0 +1,25 @@
+.primary{
+    background-color: #002B45;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 2px;
+    border: 1px;
+}
+.primary:hover{
+    background-color: #012339;
+}
+.link{
+    background-color: #FFF1E5;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 2px;
+    border: 1px;
+}
+.link:hover{
+    background-color: #dfd9d4;
+}
+
+.disable{
+    opacity: 0.5;
+}

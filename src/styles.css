@@ -1,0 +1,35 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+
+}
+
+.imgTxt{
+  display: flex;
+  margin-left: 20%;
+  justify-content: start;
+  width: 400px;
+}
+
+.rightImgTxt{
+  margin-right: 15%;
+}
+
+.step1{
+  width: 70%;
+}
