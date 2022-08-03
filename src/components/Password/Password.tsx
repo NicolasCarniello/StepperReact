@@ -25,12 +25,12 @@ const Password = ({ label, repeatLabel, setNotMatch }: PasswordProps) => {
   }, [password, regExOk, repeatPassword, samePass, setNotMatch]);
 
   return (
-    <form className="flex max-w-2xl mt-5">
+    <form className="flex  mt-5">
       <div>
         <label htmlFor="password" className="font-bold">
           {label}
         </label>
-        <div className="border-solid border-gray-400 border-2 rounded-md hover:none">
+        <div className=" border-gray-400 border-2 rounded-md">
           <input
             autoComplete="new-password"
             type="password"
@@ -50,7 +50,7 @@ const Password = ({ label, repeatLabel, setNotMatch }: PasswordProps) => {
         <label htmlFor="repeatPassword" className="font-bold">
           {repeatLabel}
         </label>
-        <div className="border-solid border-gray-400 border-2 rounded-md ">
+        <div className=" border-gray-400 border-2 rounded-md ">
           <input
             type="password"
             name=""

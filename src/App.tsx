@@ -55,54 +55,68 @@ export default function App() {
   return (
     <>
       <StepIndicator numOfSteps={steps.length} currentStep={currentStep} />
-      <div className="grid grid-cols-1 ">
-        <div className="mx-60 mt-16">
-          {currentStep === 0 && (
-            <>
+      <div className=" h-3/5 relative mt-16 mx-60 px-40 w-3/4">
+        {currentStep === 0 && (
+          <>
+            <div className="w-3/4 lg:mx-56">
               <ContentStep1 />
-              <div className="flex justify-between mt-16">
-                <FooterBtn buttonLabel={t("common.btnCancelar")} />
-                <FooterBtn
-                  onClick={handleNextButtonClick}
-                  buttonLabel={t("common.btnSiguiente")}
-                />
-              </div>
-            </>
-          )}
-          {currentStep === 1 && (
-            <>
+            </div>
+            <div className="flex absolute bottom-10 lg:space-x-96 left-1/4 ml-24 px-11  ">
+              <FooterBtn buttonLabel={t("common.btnCancelar")} />
+              <FooterBtn
+                onClick={handleNextButtonClick}
+                buttonLabel={t("common.btnSiguiente")}
+              />
+            </div>
+          </>
+        )}
+        {currentStep === 1 && (
+          <>
+            <div className="w-3/4 lg:mx-56">
               <ContentStep2 notMatch={notMatch} setNotMatch={setNotMatch} />
-              <div className="flex justify-between">
-                <FooterBtn
-                  onClick={handlePrevButtonClick}
-                  buttonLabel={t("common.btnCancelar")}
-                />
-                <FooterBtn
-                  isDisabled={notMatch}
-                  onClick={getResponse}
-                  buttonLabel={t("common.btnSiguiente")}
-                />
-              </div>
-            </>
-          )}
-          {currentStep === 2 && error === true && (
-            <>
-              <h1>{t("errorStep.titulo")}</h1>
+            </div>
+            <div className="flex absolute bottom-10 lg:space-x-96 left-1/4 ml-24 px-11  ">
+              <FooterBtn
+                onClick={handlePrevButtonClick}
+                buttonLabel={t("common.btnCancelar")}
+              />
+              <FooterBtn
+                isDisabled={notMatch}
+                onClick={getResponse}
+                buttonLabel={t("common.btnSiguiente")}
+              />
+            </div>
+          </>
+        )}
+        {currentStep === 2 && error === true && (
+          <>
+            <div className="w-3/4 lg:mx-56">
+              <h1 className="font-bold text-lg mb-6">
+                {t("errorStep.titulo")}
+              </h1>
               <p>{t("errorStep.texto")}</p>
+            </div>
+            <div className="flex absolute bottom-10 lg:space-x-96 left-1/4 ml-24 px-11">
               <FooterBtn
                 onClick={backToTop}
                 buttonLabel={t("common.btnVolverInicio")}
               />
-            </>
-          )}
-          {currentStep === 2 && success === true && (
-            <>
-              <h1>{t("successStep.titulo")}</h1>
+            </div>
+          </>
+        )}
+        {currentStep === 2 && success === true && (
+          <>
+            <div className="w-3/4 lg:mx-56">
+              <h1 className="font-bold text-lg mb-6">
+                {t("successStep.titulo")}
+              </h1>
               <p>{t("successStep.texto")}</p>
+            </div>
+            <div className="flex absolute bottom-10 lg:space-x-96 left-1/4 ml-28 px-11">
               <FooterBtn buttonLabel={t("common.btnAcceder")} />
-            </>
-          )}
-        </div>
+            </div>
+          </>
+        )}
       </div>
     </>
   );

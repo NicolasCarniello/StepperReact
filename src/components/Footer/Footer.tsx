@@ -15,7 +15,7 @@ const FooterBtn = ({
 
   return (
     <button
-      className="bg-slate-800 text-white rounded-md p-3"
+      className="bg-slate-800 text-white rounded-md p-3 px-10"
       disabled={isDisabled}
       onClick={handleClick}
     >
